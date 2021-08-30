@@ -28,6 +28,8 @@ scrape_configs:
   - match:
       selector: '{job="django-debug"}'
       stages:
+      - tenant:
+          value: "django-1"
       - drop:
           expression: ".*site-packages*"
 
