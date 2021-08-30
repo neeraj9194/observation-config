@@ -36,34 +36,15 @@ By its architecture the V2 storage slowly builds up chunks of sample data, which
 
 Churn happnes when application is updated and all the erlier series becomes obsolete and new data in new series start to roll in.
 
-   ┌──────────┬─────────┬─────────┬─────────┬─────────┐           series A
-   └──────────┴─────────┴─────────┴─────────┴─────────┘
-          ┌──────────┬─────────┬─────────┬─────────┬─────────┐    series B
-          └──────────┴─────────┴─────────┴─────────┴─────────┘ 
-                              . . .
- ┌──────────┬─────────┬─────────┬─────────┬─────────┬─────────┐   series XYZ
- └──────────┴─────────┴─────────┴─────────┴─────────┴─────────┘ 
-   chunk 1    chunk 2   chunk 3     ...
+![series](https://raw.githubusercontent.com/neeraj9194/observation-config/master/img/series.png)
 
 ### New TSDB
 
 Now the data is stored in blocks, every block of data is immutable. Each block acts as a fully independent database containing all time series data for its time window.  
 
 
-t0            t1               t3             now
- ┌───────────┐  ┌───────────┐  ┌───────────┐
- │           │  │           │  │           │            ┌────────────┐
- │           │  │           │  │  mutable  │ <── write ─┤ Prometheus │
- │           │  │           │  │           │            └────────────┘
- └───────────┘  └───────────┘  └───────────┘                   ^
-       └──────────────┴───────┬──────┴──────────────┘          │
-                              │                               query
-                              │                                │
-                            merge ─────────────────────────────┘
+![chunks](https://raw.githubusercontent.com/neeraj9194/observation-config/master/img/chunk.png)
 
-
-
-## Data retrival
 
 
 
