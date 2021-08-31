@@ -177,3 +177,19 @@ pipeline_stages:
       source: message
 ```
 
+
+
+## FAQs
+
+
+**Q:** Can I configure to send only few type of logs to S3 and rest others only from local system.
+
+**A:** No, but what you can do is setup a multi-tenant/or multi instance loki so you have different config for each one.
+
+##
+
+**Q:** Using same S3 bucket for multiple Loki installations but different sub-paths?
+
+**A:** It is accomplished by multitenancy in Loki which can be enabled by setting a X-Scope-OrgID header that way the data will be separate.
+
+##
