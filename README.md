@@ -5,8 +5,8 @@
 
 # Documentation for "How linux works"
 
-- [How Linux works](https://docs.google.com/document/d/1iFwCboyIdYgZhDzvbYtJMJVOnIJhHr3nnhfEpi6PdCI/edit?usp=sharing)
+- [How Linux works](https://github.com/neeraj9194/observation-config/blob/master/How%20Linux%20Works.pdf)
 
 # Docs on "School of SRE"
 
-- [School of SRE](https://docs.google.com/document/d/1JbFWJCXTboGV1qHTdGz8Hpl8a3qehss0qdknrdZa4uQ/edit?usp=sharing)
+- [School of SRE](https://github.com/neeraj9194/observation-config/blob/master/School%20of%20SRE.pdf)
